@@ -1,0 +1,490 @@
+/* === БАЗА === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  background-color: #0B1957;
+  overflow-x: hidden;
+  color: white;
+}
+
+/* === ФОНЫ === */
+.background-top {
+  position: absolute;
+    width: 100%;
+    height: 50%;
+    background: url('fon11.svg') no-repeat;
+    background-size: cover;
+    z-index: -2;
+}
+
+.background-down {
+  position: absolute;
+  top: 50%;
+    width: 100%;
+    height: 70%;
+    background: url('fon22.svg') no-repeat;
+    background-size: cover;
+    z-index: -2;
+}
+
+/* Десктопная версия */
+@media (min-width: 768px) {
+  .background-top {
+        width: 100%;
+        height: 100%;
+  }
+  
+  .background-down {
+    top: 100%;
+    height: 30%;
+  }
+}
+
+/* === ОБЛАКА === */
+.cloud-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+.cloud {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 200px;
+  height: 100px;
+  z-index: -1;
+  opacity: 0.9;
+  animation: float 6s ease-in-out infinite;
+}
+.cloud1 {
+  background-image: url('cloud1.png');
+  top: -40px;
+    left: -80px;
+    width: 250px;
+    animation-delay: 0s;
+}
+.cloud2 {
+  background-image: url('cloud2.png');
+  top: 100px;
+    left: 180px;
+    width: 400px;
+    animation-delay: 1s;
+    height: 150px;
+}
+.cloud3 {
+  background-image: url('cloud3.png');
+  top: 110px;
+    width: 100px;
+    animation-delay: 2s;
+}
+.cloud4 {
+  background-image: url('cloud4.png');
+  width: 100%;
+  animation-delay: 1s;
+  height: 150px;
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* === ТЕКСТ И ЗАГОЛОВКИ === */
+@font-face {
+  font-family: 'FoglihtenNo06';
+  src: url('FoglihtenNo06_076.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2 {
+  font-family: 'FoglihtenNo06', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  background: linear-gradient(to bottom, white, #E4BBC1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0.5rem auto;
+}
+h1 {
+  font-size: 2.8rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+.subtitle {
+  margin: 0.3rem 0 1rem;
+  font-size: 1.2rem;
+  color: #C17BA0;
+}
+
+/* === ОСНОВНОЙ КОНТЕЙНЕР === */
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 40px 20px 40px;
+}
+
+/* === КНОПКИ === */
+.centered-button {
+  display: flex;
+  justify-content: center;
+  margin: 0 0;
+}
+.glow-on-hover {
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  background-color: #C17BA0;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #d480a6;
+  transition: 0.3s ease;
+}
+
+.glow-on-hover:hover {
+  background-color: #e497ba;
+  box-shadow: 0 0 20px #e497ba;
+}
+
+.info {
+  font-size: 1rem;
+  padding: 12px 24px;
+  background-color: #C17BA0;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #d480a6;
+  transition: 0.3s ease;
+}
+.add-info {
+  font-size: 1rem;
+  padding: 12px 24px;
+  background-color: white;
+  color: #C17BA0;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px white;
+  transition: 0.3s ease;
+}
+
+.date-button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: transparent; 
+  color: #C17BA0;                
+  border: 2px solid #C17BA0;    
+  border-radius: 30px;
+  box-shadow: 0 0 5px #d480a6;
+  transition: 0.3s ease;
+  cursor: default;
+}
+
+
+/* === СТРЕЛКА ВНИЗ === */
+.arrow-7 {
+  margin: 60px auto 10px;
+  width: 38px;
+  height: 100px;
+}
+.arrow-7 span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #C17BA0;
+  border-right: 5px solid #C17BA0;
+  transform: rotate(45deg);
+  margin: -16px auto;
+  animation: arrow-7 2s infinite;
+}
+.arrow-7 span:nth-child(2) { animation-delay: -0.2s; }
+.arrow-7 span:nth-child(3) { animation-delay: -0.4s; }
+@keyframes arrow-7 {
+  0% { opacity: 0; transform: translate(0,-20px) rotate(45deg); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translate(0,20px) rotate(45deg); }
+}
+
+/* === КВАДРАТНЫЙ БЛОК === */
+.square-wrapper {
+  width: 200px;
+  height: 200px;
+}
+.square {
+  width: 100%;
+  height: 100%;
+  
+  background-image: url('info.jpg');
+  background-size: cover;          
+  background-position: center;    
+  background-repeat: no-repeat; 
+  border-radius: 10px;          
+  
+  opacity: 0;
+  transform: scale(1.2);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .square {
+    transition: opacity 1.5s ease, transform 1.5s ease;
+  }
+}
+.square-transition {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* === РАЗМЕТКА СЦЕНЫ === */
+.stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.stage-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+/* === КАРУСЕЛЬ SWIPER === */
+.swiper-container {
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  padding-bottom: 20px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #C17BA0;
+  min-height: 180px;
+  color: #fff;
+/*  transform: scale(0.8); */
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  transition: 0.3s all;
+  box-shadow: 0 0 20px #00000036;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.swiper-slide:not(.swiper-slide-prev):not(.swiper-slide-active):not(.swiper-slide-next) {
+  opacity: 0;
+}
+
+.swiper-slide-prev, 
+.swiper-slide-next {
+  opacity: 0.3;
+}
+
+.swiper-slide-active {
+  transition: 0.3s all;
+  opacity: 1;
+}
+
+.slide-content {
+  padding: 10px;
+  text-align: center;
+}
+
+.slide-content h3 {
+  font-size: 1.5rem;
+  font-family: 'FoglihtenNo06', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.slide-content p {
+  font-size: 1rem;
+  line-height: 1;
+  color: #fff;
+  margin: 0;
+}
+
+/* Цвет и размер стрелок */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #C17BA0 !important;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+}
+
+/* Цвет точек пагинации */
+.swiper-pagination-bullet {
+  background: #C17BA0 !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #C17BA0 !important;
+  opacity: 1;
+}
+
+/* Адаптивность для мобильных */
+@media screen and (max-width: 767px) {
+  .swiper-container {
+    width: 95%;
+    height: auto;
+  }
+
+  .swiper-slide {
+    font-size: 16px;
+    min-height: 180px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
+
+/* === АДАПТИВНОСТЬ === */
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1.4rem;
+  }
+  .mslide {
+    width: 45%;
+  }
+}
+
+hr,    
+hr:before,
+hr:after {
+    content: "";
+    background: #E4BBC1;
+    display: block;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    position: absolute;
+    animation: anim-hr 6s linear infinite;
+    border: 0;
+    overflow: visible;
+}
+hr:before {
+    left: -32px;
+}
+hr:after {
+    left: 32px;
+}
+hr {
+    position: relative;
+    margin: 30px auto;
+}
+@keyframes anim-hr {
+    0% {
+        background: #E4BBC1;
+    }
+    50% {
+        background: #C17BA0;
+    }  
+    100% {
+        background: #E4BBC1;
+    }
+}
+
+@media (min-width: 768px) {
+  .cloud1 {
+    left: 15%;
+    top: unset;         /* если нужно убрать старый top */
+    width: 300px;
+    height: 200px;
+  }
+
+  .cloud2 {
+    right: 10%;
+    left: unset;        /* отключаем старое left */
+    width: 400px;
+    height: 250px;
+    top: 100px;
+  }
+
+  .cloud3 {
+    top: 30%;
+    left: unset;
+    width: 500px;
+  }
+
+  .cloud4 {
+    display: none;
+  }
+
+  .background-down {
+    display: none;
+}
+}
+
+/* Форма регистрации */
+.header-with-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-field {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.form-field input {
+  width: 80%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid white;
+  border-radius: 30px;
+  outline: none;
+}
+.form-field input:focus {
+  border-color: #C17BA0;
+  box-shadow: 0 0 10px #C17BA0;
+}
+
+.cloud-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

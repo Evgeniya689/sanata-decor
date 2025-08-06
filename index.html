@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ВОСХОД</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+</head>
+<body>
+  <div class="background-top"></div>
+  <div class="background-down"></div>
+
+  <div class="cloud-container">
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+  </div>
+
+  <!-- Контейнер с текстом поверх облаков -->
+  <div class="content">
+    <header>
+      <h1>ВОСХОД</h1>
+      <p class="subtitle">изменения уже здесь</p>
+    </header>
+    <div class="arrow-7">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="centered-button">
+      <button class="glow-on-hover" onclick="scrollToTable()">УЧАСТВОВАТЬ</button>
+    </div>
+
+    <!-- Блоки с прокруткой -->
+    <div class="swiper-container" style="margin-top: 5%;">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Добро пожаловать!</h3>
+            <p>🔆 ВОСХОД — это пространство для тех, кто готов к изменениям.<br><br>💡 Идеи. Люди. Движение.<br>Пришло время выйти из тени и сделать шаг вперёд.</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Что вас ждёт?</h3>
+            <p>🔹 Интерактивные сессии<br>🔹 Мастермайнды и обсуждения<br>🔹 Уникальные гости и менторы<br>🔹 Нетворкинг без неловкости<br><br>Всё, чтобы зажечь искру внутри.</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Для кого это?</h3>
+            <p>— Для тех, кто ищет вдохновение<br>— Для тех, кто хочет запустить перемены<br>— Для тех, кто устал от «как раньше»<br><br>✨ Ты не случайно здесь.</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Когда и где?</h3>
+            <p>📅 <strong>20 сентября 2025</strong><br>📍 Локация — будет раскрыта участникам<br><br>Время — настраиваем под энергию восхода.<br>Место — там, где случаются инсайты.</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <h3>Как присоединиться?</h3>
+            <p>🔗 Заполни форму — и получи приглашение.<br>👁 Места ограничены, отбор по заявкам.<br>☀️ Изменения уже здесь. Стань их частью.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <h2>ЧТО ВАС ЖДЕТ</h2>
+
+    <div class="stage">
+      <div class="wrap">
+        <div class="square-wrapper">
+          <div class="square square-transition"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="centered-button">
+      <a href="registr.html" id="zayavka" class="glow-on-hover" style="text-decoration: none;">
+          Отправить заявку
+      </a>
+    </div>    
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.vk.com" target="_blank" style="display: inline-block; width: 50px; height: 50px; background-image: url('VK.svg'); background-size: cover; margin: 0 10px;"></a>
+        <a href="https://www.instagram.com" target="_blank" style="display: inline-block; width: 50px; height: 50px; background-image: url('INST.svg'); background-size: cover; margin: 0 10px;"></a>
+        <a href="https://www.telegram.com" target="_blank" style="display: inline-block; width: 50px; height: 50px; background-image: url('TG.svg'); background-size: cover; margin: 0 10px;"></a>
+    </div>
+
+    <hr/>
+
+    <h2>НАШИ СОЦСЕТИ</h2>
+  </div>
+
+  <div class="cloud cloud4"></div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+</html>
