@@ -1,55 +1,28 @@
-function scrollToTable() {
-    const section = document.getElementById("zayavka");
-    section.scrollIntoView({ behavior: "smooth" });
-  }
-  
-  (function () {
-    var squareWrapper = document.querySelector('.square-wrapper');
-    var square = squareWrapper.querySelector('.square');
-    square.classList.remove('square-transition');
-  
-    var observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
-          return;
-        }
-  
-        if (entry.isIntersecting) {
-          square.classList.add('square-transition');
-          return;
-        }
-  
-        square.classList.remove('square-transition');
-      });
-    });
-  
-    observer.observe(squareWrapper);
-  })();
+let $owl = $('.carousel-2');
+    $owl.children().each( function( index ) {
+    $(this).attr( 'data-position', index );
+});
+$(document).on('click', '.owl-item>div', function() {
+    let $speed = 300;
+    $owl.trigger('to.owl.carousel', [$(this).data( 'position' ), $speed] );
+});    
+$owl.owlCarousel({
+    loop:true,
+    center: true,
+    stagePadding: 70,
+    nav: true,
+    dots: false,
+    navText: ['&lsaquo;', '&rsaquo;'],
+    responsive:{
+        0:{items:1},
+        600:{items:2},
+        992:{items:3},
+        1200:{items:4},
+        1600:{items:5}            
+    }
+});
 
-  var swiper = new Swiper(".swiper-container", {
-    slidesPerView: 1,
-    loop: true,
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    spaceBetween: -100,
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 800,
-      modifier: 1,
-      slideShadows: false
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    },
-  });
-
+// Отправка формы
 function sendForm() {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
