@@ -144,7 +144,7 @@ h1, h2 {
   margin: 0.5rem auto;
 }
 h1 {
-  font-size: 2.8rem;
+  font-size: 3.5rem;
 }
 h2 {
   font-size: 1.8rem;
@@ -164,7 +164,7 @@ h2 {
   font-style: normal;
 }
 
-.subtitle {
+.main-subtitle {
   font-family: 'Montserrat', sans-serif;
     color: #413B2F;
     font-size: 1.2rem;
@@ -233,7 +233,7 @@ h2 {
 
 /* Левая картинка */
 .left-image img {
-  width: 400px;
+  width: 500px;
   height: auto;
   object-fit: cover;
 }
@@ -250,36 +250,266 @@ h2 {
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+    color: #413B2F;
+    font-size: 1.0rem;
+    font-weight: 300; /* или 300 */
+    letter-spacing: 0.1em; /* увеличивает расстояние и визуально "разгружает" текст */
+    margin: 0;
+    padding: 1%;
+}
 
-
-
-
-/* Форма регистрации */
-.header-with-button {
+/* Четвертая Секция с Прайсом */
+.price-section {
+  position: relative;
+  background-image: url('section_4_F1.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 30px 20px; /* отступы сверху и снизу */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.form-field {
-  margin-bottom: 15px;
+/* Контейнер для центрирования содержимого */
+.price-content {
   text-align: center;
-}
-.form-field input {
-  width: 80%;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid white;
-  border-radius: 30px;
-  outline: none;
-}
-.form-field input:focus {
-  border-color: #C17BA0;
-  box-shadow: 0 0 10px #C17BA0;
+  width: 100%;
+  color: #000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* Центрирует все элементы по горизонтали */
+  justify-content: center; /* Центрирует по вертикали, если нужно */
 }
 
-.cloud-wrapper {
+/* Заголовок "ПРАЙС" */
+.price-title {
+  font-family: 'FoglihtenNo06', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  margin: 0.5rem auto;
+  font-size: 3.5rem;
+}
+
+/* Белый прямоугольник */
+.price-box {
+  width: 500px;
+  height: auto; /* пусть высота подстраивается под контент */
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  margin-bottom: 3%;
+  margin-top: 3%;
+  text-align: left;
+  display: block; /* убираем flex */
+}
+
+/* Текст в белом блоке */
+.subtitle-box {
+  font-family: 'Montserrat', sans-serif;
+    color: #413B2F;
+    font-size: 1.1rem;
+    font-weight: 300; /* или 300 */
+    letter-spacing: 0.1em; /* увеличивает расстояние и визуально "разгружает" текст */
+    margin: 0;
+    padding: 2%;
+}
+
+/* Текст под белым блоком */
+.price-footer-text {
+  font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300; /* или 300 */
+    margin: 0;
+    padding: 1%;
+}
+
+/* Пятая Секция с Каруселью */
+.appointment-section {
+  text-align: center;
+}
+
+.appointment-content {
+  margin: 0 auto;
+}
+
+/* Кнопка */
+.appointment-button {
+  font-family: 'FoglihtenNo06', sans-serif;
+  font-weight: 300;
+  color: #413B2F;
+  padding: 15px 50px;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-image: url('button-flower.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 50px;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 5%;
+}
+
+.appointment-button:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Карусель фото*/
+.carousel-2 .owl-item {
+  padding: 10px 0 30px 0;
+}
+.carousel-2 .owl-pic  {
+  background: #413B2F;
+  margin: 40px 0;
+  border: 5px solid #413B2F;
+  border-top: 10px solid #413B2F;
+  border-bottom: 10px solid #413B2F;
+  transition: all 0.4s ease;
+  width: 350px;
+  height: 440px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3), 0 16px 20px rgba(0,0,0,0.2);
+}
+.carousel-2 .owl-item.center .owl-pic {
+  opacity: 1;
+  border: 8px solid #EFECE6;
+  margin: 0 0 0 -15%;
+  width: 400px;
+  height: 500px;
+}
+.carousel-2 .owl-item.center + .owl-item {
+  position: relative;
+  z-index: -1;
+}
+.carousel-2 .owl-pic img {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s opacity ease, 0.3s transform ease;
+  opacity: 0.6;
+  object-fit: cover;
+}
+.carousel-2 .owl-item .owl-pic:hover img,
+.carousel-2 .owl-item.center .owl-pic img {
+  opacity: 1;
+}
+.carousel-2 .owl-nav button.owl-prev,
+.carousel-2 .owl-nav button.owl-next {
+  position: absolute;
+  cursor: pointer;
+  font-size: 60px!important;
+  color: #FFF!important;
+  top: 0;
+  height: 100%;
+  width: 70px;
+  transition: 0.3s opacity ease;
+  opacity: 0.6;
+  margin: 0;
+  padding-bottom: 30px!important;
+}
+.carousel-2 .owl-nav button.owl-prev:hover,
+.carousel-2 .owl-nav button.owl-next:hover {
+  opacity: 1;
+}
+.carousel-2 .owl-nav button.owl-prev,
+.carousel-2 .owl-nav button.owl-prev:hover {
+  left: 0;
+}
+.carousel-2 .owl-nav button.owl-next,
+.carousel-2 .owl-nav button.owl-next:hover {
+  right: 0;
+}
+
+/* Шестая Секция с Контактами */
+.messenger-section {
+  position: relative;
+  padding: 10px 20px 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.messenger-text {
+  max-width: 800px; /* задайте нужную ширину */
+  margin: 0 auto;
+  text-align: left;
+}
+
+.messenger-title {
+  font-family: 'Montserrat', sans-serif;
+  color: #413B2F;
+  font-size: 1.3rem;
+  font-weight: 300; /* или 300 */
+  letter-spacing: 0.1em; /* увеличивает расстояние и визуально "разгружает" текст */
+  margin: 0;
+  padding: 1%;
+  z-index: 2;
+  position: relative;
+}
+
+/* КНОПКИ */
+.messenger-buttons {
   display: flex;
   justify-content: center;
-  width: 100%;
+  gap: 100px;
+  z-index: 2;
+  position: relative;
+  margin-top: 12%;
+  margin-bottom: 3%;
 }
+
+.messenger-btn {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  border-radius: 50px;
+}
+
+/* Подсветка при наведении */
+.messenger-btn:hover {
+  transform: scale(1.1);
+  border-radius: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Фоны для каждой кнопки */
+.telegram {
+  background-image: url('telegram.svg');
+}
+
+.whatsapp {
+  background-image: url('whatsapp.svg');
+}
+
+.viber {
+  background-image: url('viber.svg');
+}
+
+/* Цветок на заднем фоне */
+.flower-background {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+  width: 1200px;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  object-fit: contain;
+}
+
+
+
+
+
