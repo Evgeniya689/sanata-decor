@@ -466,8 +466,9 @@ h2 {
 }
 
 .messenger-btn {
-  width: 150px;
-  height: 150px;
+  width: 70px;
+  height: 70px;
+  background-color: #efece6ab;
   background-size: cover;
   background-position: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
