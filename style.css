@@ -556,13 +556,11 @@ h2 {
   }
 
   .flowers-wrapper {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-    width: 100%;
-    height: auto;
+    top: 210px; /* смещение всей группы от верха страницы */
+    width: 375px; /* ширина по размеру нижнего цветка */
+    height: 208px; /* высота по размеру нижнего цветка */
   }
+  
   .down-flower{
     width: 375px;
     height: 208px;
