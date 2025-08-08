@@ -560,7 +560,7 @@ h2 {
     width: 375px; /* ширина по размеру нижнего цветка */
     height: 208px; /* высота по размеру нижнего цветка */
   }
-  
+
   .down-flower{
     width: 375px;
     height: 208px;
@@ -628,7 +628,7 @@ h2 {
     padding: 5%;
     height: auto;
   }
-  .subtitle { font-size: 0.9rem; }
+  .subtitle { font-size: 0.7rem; }
 
   .big-subtitle {
     font-size: 1.5rem;
@@ -643,10 +643,10 @@ h2 {
     padding: 10px;
   }
   .subtitle-box {
-    font-size: 0.95rem;
+    font-size: 0.65rem;
   }
   .price-footer-text {
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
   }
 
