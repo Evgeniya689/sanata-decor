@@ -408,7 +408,6 @@ h2 {
 /* Шестая Секция с Контактами */
 .messenger-section {
   position: relative;
-  padding: 10px 20px 10px;
   text-align: center;
   overflow: hidden;
 }
@@ -431,6 +430,39 @@ h2 {
   position: relative;
 }
 
+.messenger-actions {
+  position: relative; /* создаём один контекст наложения */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1; /* весь блок выше обычного фона */
+}
+
+/* Кнопка */
+.number-button {
+  font-family: 'FoglihtenNo06', sans-serif;
+  font-weight: 300;
+  position: relative;
+  z-index: 2; /* кнопка над фоном */
+  color: #413B2F;
+  padding: 15px 50px;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: white !important;
+  margin-bottom: 50px;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 5%;
+}
+
+.number-button:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
 /* КНОПКИ */
 .messenger-buttons {
   display: flex;
@@ -438,13 +470,12 @@ h2 {
   gap: 100px;
   z-index: 2;
   position: relative;
-  margin-top: 12%;
   margin-bottom: 3%;
 }
 
 .messenger-btn {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   background-color: #efece6ab;
   background-size: cover;
   background-position: center;
@@ -481,7 +512,7 @@ h2 {
   transform: translateX(-50%);
   height: auto;
   width: 1200px;
-  z-index: 1;
+  z-index: 0;
   pointer-events: none;
   user-select: none;
   object-fit: contain;
