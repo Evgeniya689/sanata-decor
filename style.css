@@ -245,6 +245,15 @@ h2 {
     padding: 1%;
 }
 
+.big-subtitle {
+  font-family: 'FoglihtenNo06', sans-serif;
+  font-weight: 300;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #413B2F;
+  margin: 0.5rem auto;
+}
+
 /* Четвертая Секция с Прайсом */
 .price-section {
   position: relative;
@@ -535,7 +544,7 @@ h2 {
 
   /* Первая секция */
   .hero-section {
-    height: 405px;
+    height: 450px;
   }
   .background-gallery {
     align-items: center;
@@ -556,6 +565,8 @@ h2 {
   }
   .down-flower{
     position: static;
+    width: 375px;
+    height: 208px;
   }
   .top-flower {
     height: 139px;
@@ -585,16 +596,16 @@ h2 {
     width: 50%;
   }
   .center-text img {
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     width: 80%;
   }
-  h1 { font-size: 2.2rem; }
-  h2 { font-size: 1.5rem; }
-  .main-subtitle { font-size: 1rem; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.0rem; }
+  .main-subtitle { font-size: 0.7rem; }
 
   /* Below text */
-  .bellow-title { font-size: 1.7rem; }
+  .bellow-title { font-size: 1.7rem; padding: 20px 10px;}
 
   /* Третья секция */
   .split-section {
@@ -614,18 +625,23 @@ h2 {
     margin: 0;
   }
   .right-box {
-    width: 90%;
+    width: 90%;    
+    padding: 5%;
     height: auto;
   }
   .subtitle { font-size: 0.9rem; }
 
+  .big-subtitle {
+    font-size: 1.5rem;
+  }
+
   /* Прайс */
   .price-title {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
   }
   .price-box {
     width: 90%;
-    padding: 20px;
+    padding: 10px;
   }
   .subtitle-box {
     font-size: 0.95rem;
@@ -644,13 +660,13 @@ h2 {
   }
 
   .carousel-2 .owl-pic {
-    width: 80%;
-    height: auto;
+    width: 180px;
+    height: 270px;
     margin: 10px auto;
   }
-  .carousel-2 .owl-item.center .owl-pic {
-    width: 90%;
-    height: auto;
+  .carousel-2 .owl-item.center .owl-pic {    
+    width: 210px;
+    height: 300px;
     margin: 0 auto;
   }
   .carousel-2 .owl-nav button.owl-prev,
