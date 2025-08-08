@@ -36,16 +36,6 @@ body {
   object-fit: cover; /* чтобы картинка не деформировалась */
 }
 
-.background-gallery::after {
-  content: "";
-  position: absolute;
-  bottom: -40px; /* отступ от нижней границы фото */
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #413B2F;
-}
-
 /* Контейнер с цветами и заголовком */
 .flowers-wrapper {
   position: absolute;
@@ -186,16 +176,6 @@ h2 {
     font-weight: 300; /* или 300 */
     margin: 0;
     padding: 0;
-}
-
-.below-text::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  margin-top: 1%;
-  background-color: #413B2F;
 }
 
 /*Третья секция*/
@@ -346,10 +326,7 @@ h2 {
   padding: 15px 50px;
   border: none;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  background-image: url('button-flower.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: white;
   margin-bottom: 50px;
   font-size: 3rem;
   letter-spacing: 0.1em;
