@@ -323,7 +323,7 @@ h2 {
   font-family: 'FoglihtenNo06', sans-serif;
   font-weight: 300;
   color: #413B2F;
-  padding: 15px 50px;
+  padding: 20px 50px 10px; /* сверху | по бокам | снизу */
   border: none;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   background-color: white;
@@ -445,7 +445,7 @@ h2 {
   position: relative;
   z-index: 2; /* кнопка над фоном */
   color: #413B2F;
-  padding: 15px 50px;
+  padding: 20px 50px 10px; /* сверху | по бокам | снизу */
   border: none;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   background-color: white !important;
