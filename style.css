@@ -564,9 +564,10 @@ h2 {
     height: auto;
   }
   .down-flower{
-    position: static;
     width: 375px;
     height: 208px;
+    left: 0px;
+    top: 0px;
   }
   .top-flower {
     height: 139px;
