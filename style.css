@@ -218,15 +218,19 @@ h2 {
 
 /* Левая картинка */
 .left-image img {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: auto;
   object-fit: cover;
 }
 
-/* Белый блок справа */
+/* Белый блок справа — компьютерная версия */
 .right-box {
-  width: 500px;
-  height: 300px;
+  width: 100%;
+  max-width: 500px; /* максимум при широком экране */
+  min-width: 350px; /* чтобы не сжимался слишком сильно */
+  margin-right: 2%; /* отступ от правого края */
+  height: auto; /* пусть высота подстраивается */
   background: #fff;
   padding: 40px;
   display: flex;
@@ -234,6 +238,7 @@ h2 {
   justify-content: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
+
 
 .subtitle {
   font-family: 'Montserrat', sans-serif;
@@ -619,10 +624,12 @@ h2 {
     width: 100%;
   }
   .left-image img {
-    width: 100%;
-    padding: 0;
-    margin: 0;
+    width: 90%;              /* уменьшили ширину, чтобы появились поля */
+    display: block;          /* нужно для центрирования через margin */
+    margin: 0 auto 20px auto; /* auto слева и справа — выравнивание по центру, 20px снизу */
+    padding: 0;               /* убрали внутренние отступы */
   }
+  
   .right-box {
     width: 90%;    
     padding: 5%;
@@ -658,20 +665,42 @@ h2 {
     margin-bottom: 20px;
   }
 
+  /* Центрируем каждый элемент карусели */
+  .carousel-2 .owl-item {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 20px 0;
+  }
+
+  /* Общие фото */
   .carousel-2 .owl-pic {
-    width: 180px;
-    height: 270px;
-    margin: 10px auto;
-  }
-  .carousel-2 .owl-item.center .owl-pic {    
-    width: 210px;
+    width: 200px;
     height: 300px;
-    margin: 0 auto;
+    margin: 10px auto;
+    border: 6px solid #413B2F;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
   }
+
+  /* Центральное фото без смещения */
+  .carousel-2 .owl-item.center .owl-pic {
+    width: 260px;
+    height: 330px;
+    margin: 0 auto;
+    border: 6px solid #EFECE6;
+  }
+
+  /* Изображения внутри */
+  .carousel-2 .owl-pic img {
+    opacity: 1;
+  }
+
+  /* Кнопки навигации */
   .carousel-2 .owl-nav button.owl-prev,
   .carousel-2 .owl-nav button.owl-next {
     font-size: 40px !important;
     width: 50px;
+    opacity: 0.8;
   }
 
   /* Секция с контактами */
